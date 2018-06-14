@@ -15,7 +15,7 @@ $(document).ready(function(){
 
         //declare the random variables
         //random number to guess at the start of the game between 19-120
-        var guessRandom = Math.floor(Math.random() * 120-19) +19;
+        var guessRandom = Math.floor(Math.random()*(120-19+1)+19);
         //put the random number into the empty #randomNumber div
         $('#randomNumber').text(guessRandom);
 
@@ -32,7 +32,14 @@ $(document).ready(function(){
         console.log(crystal3);
         console.log(crystal4);
 
+        function winner(){
+                alert("You won! Awesome!");
+        }
 
+        function loser () {
+                alert("When you don't succeed, try, try again!")
+                
+        }
         //set up the .onclick actions for the crystals
 
         $('#crystal1').on ('click', function (){
@@ -40,15 +47,49 @@ $(document).ready(function(){
                 console.log("New userTotal= " + userTotal);
                 $('#total-score').text(userTotal); 
                       //sets the win or lose conditions
-                    if (userTotal == guessRandom){
-                      yay();
+                    if (userTotal === guessRandom){
+                      winner()
                     }
-                    else if ( userTotal > Random){
+                    else if ( userTotal > guessRandom){
                       loser();
                     }   
-              })  
-       
-
+        })  
+        $('#crystal2').on ('click', function (){
+                userTotal = userTotal + crystal2;
+                console.log("New userTotal= " + userTotal);
+                $('#total-score').text(userTotal); 
+                      //sets the win or lose conditions
+                    if (userTotal === guessRandom){
+                      winner()
+                    }
+                    else if ( userTotal > guessRandom){
+                      loser();
+                    }   
+        })         
+        $('#crystal3').on ('click', function (){
+                userTotal = userTotal + crystal3;
+                console.log("New userTotal= " + userTotal);
+                $('#total-score').text(userTotal); 
+                      //sets the win or lose conditions
+                    if (userTotal === guessRandom){
+                      winner()
+                    }
+                    else if ( userTotal > guessRandom){
+                      loser();
+                    }   
+        })         
+        $('#crystal4').on ('click', function (){
+                userTotal = userTotal + crystal4;
+                console.log("New userTotal= " + userTotal);
+                $('#total-score').text(userTotal); 
+                      //sets the win or lose conditions
+                    if (userTotal === guessRandom){
+                      winner()
+                    }
+                    else if ( userTotal > guessRandom){
+                      loser();
+                    }   
+        }) 
         // function start  () {
         //         Random=Math.floor(Math.random()*101+19);
         //         console.log(Random)
