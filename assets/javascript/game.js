@@ -42,6 +42,8 @@ $(document).ready(function () {
                 var crystal3 = Math.floor(Math.random() * 12 + 1);
                 var crystal4 = Math.floor(Math.random() * 12 + 1);
                 userTotal = 0;
+                $('#wins').text(wins);
+                $('#losses').text(losses);
                 $('#total-score').text(userTotal);
         }
 
@@ -55,11 +57,11 @@ $(document).ready(function () {
 
         };
         function addWins(){
-                var wins = wins +1;
+                wins = wins +1;
         }
 
         function addLoss (){
-                var losses = losses +1;
+                losses = losses +1;
         }
         //set up the .onclick actions for the crystals
 
