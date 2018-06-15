@@ -32,7 +32,7 @@ $(document).ready(function () {
         console.log(crystal3);
         console.log(crystal4);
 
-        //decalre functions that will determine start
+        //declare functions that will determine start of the game
         function startGame() {
                 Random = Math.floor(Math.random() * 101 + 19);
                 console.log(Random)
@@ -54,6 +54,13 @@ $(document).ready(function () {
                 alert("When you don't succeed, try, try again!")
 
         };
+        function addWins(){
+                var wins = wins +1;
+        }
+
+        function addLoss (){
+                var losses = losses +1;
+        }
         //set up the .onclick actions for the crystals
 
         $('#crystal1').on('click', function () {
@@ -64,10 +71,12 @@ $(document).ready(function () {
                 if (userTotal === guessRandom) {
                         // wins++;
                         winner();
+                        addWins();
                         startGame();
                 } else if (userTotal > guessRandom) {
                         // losses ++;
                         loser();
+                        addLoss();
                         startGame();
                 }
         })
@@ -79,10 +88,12 @@ $(document).ready(function () {
                 if (userTotal === guessRandom) {
                         // wins++;
                         winner();
+                        addWins();
                         startGame();
                 } else if (userTotal > guessRandom) {
                         // losses ++; not working correctly
                         loser();
+                        addLoss();
                         startGame();
                 }
         })
@@ -94,10 +105,12 @@ $(document).ready(function () {
                 if (userTotal === guessRandom) {
                         // wins++;
                         winner();
+                        addWins();
                         startGame();
                 } else if (userTotal > guessRandom) {
                         // losses ++;
                         loser();
+                        addLoss();
                         startGame();
                 }
         })
@@ -109,10 +122,12 @@ $(document).ready(function () {
                 if (userTotal === guessRandom) {
                         // wins++;
                         winner();
+                        addWins();
                         startGame();
                 } else if (userTotal > guessRandom) {
                         // losses ++;
                         loser();
+                        addLoss();
                         startGame();
                 }
         });
