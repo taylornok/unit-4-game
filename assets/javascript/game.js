@@ -34,14 +34,20 @@ $(document).ready(function () {
 
         //declare functions that will determine start of the game
         function startGame() {
-                Random = Math.floor(Math.random() * 101 + 19);
-                console.log(Random)
-                $('#randomNumber').text(Random);
-                var crystal1 = Math.floor(Math.random() * 12 + 1);
-                var crystal2 = Math.floor(Math.random() * 12 + 1);
-                var crystal3 = Math.floor(Math.random() * 12 + 1);
-                var crystal4 = Math.floor(Math.random() * 12 + 1);
+                guessRandom = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+                console.log("New Random", guessRandom)
+                $('#randomNumber').text(guessRandom);
+                crystal1 = Math.floor(Math.random() * 12 + 1);
+                crystal2 = Math.floor(Math.random() * 12 + 1);
+                crystal3 = Math.floor(Math.random() * 12 + 1);
+                crystal4 = Math.floor(Math.random() * 12 + 1);
+                console.log(crystal1);
+                console.log(crystal2);
+                console.log(crystal3);
+                console.log(crystal4);
                 userTotal = 0;
+                $('#wins').text(wins);
+                $('#losses').text(losses);
                 $('#total-score').text(userTotal);
         }
 
