@@ -62,11 +62,11 @@ $(document).ready(function () {
                 $('#total-score').text(userTotal);
                 //sets the win or lose conditions
                 if (userTotal === guessRandom) {
-                        wins++;
+                        // wins++;
                         winner();
                         startGame();
                 } else if (userTotal > guessRandom) {
-                        losses ++;
+                        // losses ++;
                         loser();
                         startGame();
                 }
@@ -77,11 +77,11 @@ $(document).ready(function () {
                 $('#total-score').text(userTotal);
                 //sets the win or lose conditions
                 if (userTotal === guessRandom) {
-                        wins++;
+                        // wins++;
                         winner();
                         startGame();
                 } else if (userTotal > guessRandom) {
-                        losses ++;
+                        // losses ++; not working correctly
                         loser();
                         startGame();
                 }
@@ -92,11 +92,11 @@ $(document).ready(function () {
                 $('#total-score').text(userTotal);
                 //sets the win or lose conditions
                 if (userTotal === guessRandom) {
-                        wins++;
+                        // wins++;
                         winner();
                         startGame();
                 } else if (userTotal > guessRandom) {
-                        losses ++;
+                        // losses ++;
                         loser();
                         startGame();
                 }
@@ -107,11 +107,11 @@ $(document).ready(function () {
                 $('#total-score').text(userTotal);
                 //sets the win or lose conditions
                 if (userTotal === guessRandom) {
-                        wins++;
+                        // wins++;
                         winner();
                         startGame();
                 } else if (userTotal > guessRandom) {
-                        losses ++;
+                        // losses ++;
                         loser();
                         startGame();
                 }
