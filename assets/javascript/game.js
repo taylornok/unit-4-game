@@ -42,8 +42,6 @@ $(document).ready(function () {
                 var crystal3 = Math.floor(Math.random() * 12 + 1);
                 var crystal4 = Math.floor(Math.random() * 12 + 1);
                 userTotal = 0;
-                $('#wins').text(wins);
-                $('#losses').text(losses);
                 $('#total-score').text(userTotal);
         }
 
